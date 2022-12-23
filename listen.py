@@ -1,22 +1,24 @@
 import speech_recognition as sr
 
 
-def audio():
-    r = sr.Recognizer()
-    mic = sr.Microphone()
+class J_audio:
 
-    # écouter l'audio depuis le micro
-    with mic as source:
-        print("Say something:")
-        audio = r.listen(source)
+    def __int__(self):
+        self.r = sr.Recognizer()
+        self.mic = sr.Microphone()
 
-    # résultat ou échec
-    try:
-        said = r.recognize_google(audio)
-        return said
-    except sr.UnknownValueError:
-        print("Sorry, I didn't understand that.")
-    except sr.RequestError as e:
-        print("Error requesting results from Google Speech Recognition service; {0}".format(e))
+    def audio(self):
 
-audio()
+        # écouter l'audio depuis le micro
+        with mic as source:
+            print("Say something:")
+            audio = self.r.listen(source)
+
+        # résultat ou échec
+        try:
+            said = self.r.recognize_google(audio)
+            return said
+        except sr.UnknownValueError:
+            print("Sorry, I didn't understand that.")
+        except sr.RequestError as e:
+            print("Error requesting results from Google Speech Recognition service; {0}".format(e))
