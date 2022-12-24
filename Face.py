@@ -1,4 +1,5 @@
 import cv2
+
 def face():
     cascadeClassifierPath = 'haarcascade_frontalface_alt.xml'  # Chemin du Classifier
     cascadeClassifier = cv2.CascadeClassifier(cascadeClassifierPath)
@@ -19,3 +20,4 @@ def face():
 
     cap.release()
     cv2.destroyAllWindows()
+face()

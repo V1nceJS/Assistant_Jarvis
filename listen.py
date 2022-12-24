@@ -1,6 +1,6 @@
 import speech_recognition as sr
 
-# il faudra modifier notre reconnaissance vocal pour quellesois en francais et aussi car il faut que elle puyisse mieux nous entendre
+# il faudra modifier reconnaissance vocal pour qu'ellesois francais et mieux comprendre
 
 
 def audio():
@@ -9,15 +9,14 @@ def audio():
     # écouter l'audio depuis le micro
     with mic as source:
         print("Say something:")
-        audio = r.listen(source)
+        audio_source = r.listen(source)
 
     # résultat ou échec
     try:
-        said = r.recognize_google(audio)
+        said = r.recognize_google(audio_source)
         print(said)
         return said
     except sr.UnknownValueError:
         print("Sorry, I didn't understand that.")
     except sr.RequestError as e:
         print("Error requesting results from Google Speech Recognition service; {0}".format(e))
-
