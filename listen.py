@@ -1,6 +1,6 @@
 import speech_recognition as sr
 
-
+# il faudra modifier notre reconnaissance vocal pour quellesois en francais et aussi car il faut que elle puyisse mieux nous entendre
 
 
 def audio():
