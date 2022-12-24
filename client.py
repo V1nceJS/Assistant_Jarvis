@@ -1,9 +1,10 @@
 from listen import audio
 from server import get_weather
-
+from Face import face
 
 def run():
     client_on = True
+    face()
     while client_on:
         audio()
 
