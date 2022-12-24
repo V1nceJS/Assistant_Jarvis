@@ -14,10 +14,10 @@ def audio():
     # résultat ou échec
     try:
         said = r.recognize_google(audio)
+        print(said)
         return said
     except sr.UnknownValueError:
         print("Sorry, I didn't understand that.")
     except sr.RequestError as e:
         print("Error requesting results from Google Speech Recognition service; {0}".format(e))
 
-audio()
