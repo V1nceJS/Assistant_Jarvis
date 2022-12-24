@@ -1,0 +1,9 @@
+# Target labels
+ Main
+ opencv_gapi
+ Sample
+# Source files and their labels
+/Users/raphaeltolila/PycharmProjects/assistant Video/Assistant_Jarvis/opencv/modules/gapi/samples/oak_rgb_camera_encoding.cpp
+ Main
+ opencv_gapi
+ Sample
