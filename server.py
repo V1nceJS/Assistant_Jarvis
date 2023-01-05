@@ -1,18 +1,19 @@
 from flask import Flask
 import requests
 import json
+from functions import *
 app = Flask(__name__)
 
+list_of_functions = ["get_weather"]
+@app.route("/<function>/<param1>")
+def action(function, param1):
+    if str(function) in list_of_functions:
 
-@app.route("/get-weather/<city>")
-def get_weather(city):
-    response = requests.get(
-        f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid=50792187498d2304f76862189df71c86&units=metric")
-    data = response.json()
-    print(data["main"]["temp"])
-    temperature = data["main"]["temp"]
-    # retourne la température en celciusS
-    return f"{temperature}"
+        return eval(function + "(param1)")
+
+    else:
+        return "je ne sais pas encore faire ça"
+
 
 
 if __name__ == '__main__':
