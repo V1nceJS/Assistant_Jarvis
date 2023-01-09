@@ -6,7 +6,7 @@ def get_weather(param1):
     print(data["main"]["temp"])
     temperature = data["main"]["temp"]
     #retourne la température en celcius
-    return f"{temperature}"
+    return f"la température actuel à {param1} est de {temperature}°C"
 
 
 def test():
